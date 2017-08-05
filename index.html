@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Validate</title>
+	<link href="https://cdn.bootcss.com/normalize/7.0.0/normalize.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="wrap wrap-sm">
+		<div class="header">
+			<h1>Yo!还有Freestyle吗？</h1>
+		</div>
+		<div class="form">
+			<form>
+				<div class="input-wrap">
+					<label>姓名</label>
+					<input type="text" class="input-control" data-rule="pattern:^[a-z0-9]$|min:18|maxlength:10|minglength:3>
+					<div class="input-error">姓名格式有误</div>
+				</div>
+			</form>
+		</div>
+	</div>
+<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
+<script src="js/validator.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
