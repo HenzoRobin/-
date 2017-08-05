@@ -9,20 +9,61 @@
 <body>
 	<div class="wrap wrap-sm">
 		<div class="header">
-			<h1>Yo!还有Freestyle吗？</h1>
+			<h1>註冊</h1>
 		</div>
 		<div class="form">
-			<form>
+			<form id="singup">
 				<div class="input-wrap">
 					<label>姓名</label>
-					<input type="text" class="input-control" data-rule="pattern:^[a-z0-9]$|min:18|maxlength:10|minglength:3>
-					<div class="input-error">姓名格式有误</div>
+					<input type="text" class="input-control"
+					data-rule= '
+					maxlength:10|
+					minlength:2|'
+					name="name">
+					<div id="name-input-error" class="input-error">姓名格式有误</div>
 				</div>
+				<div class="input-wrap">
+					<label>用戶名</label>
+					<input type="text" class="input-control"
+					data-rule= '
+					pattern:"^[a-z0-9]*$"|
+					maxlength:8|
+					minlength:4|'
+					name="username">
+					<div id="username-input-error" class="input-error">用戶名格式有误</div>
+				</div>
+				<div class="input-wrap">
+					<label>自我介紹</label>
+					<input type="text" class="input-control"
+					data-rule= '
+					required:false'
+					name="intro">
+					<div id="intro-input-error" class="input-error">介紹格式有误</div>
+				</div>
+				<div class="input-wrap">
+					<label>密碼</label>
+					<input type="password" class="input-control"
+					data-rule= '
+					maxlength:20|
+					minlength:6|'
+					name="password">
+					<div id="password-input-error" class="input-error">介紹格式有误</div>
+				</div>
+				<div class="input-wrap">
+					<label>年齡</label>
+					<input type="text" class="input-control"
+					data-rule= '
+					min:18'
+					name="age">
+					<div id="age-input-error" class="input-error">年齡格式有误</div>
+				</div>
+				<button class="button-control" type="submit">註冊</button>
 			</form>
 		</div>
 	</div>
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.js"></script>
 <script src="js/validator.js"></script>
+<script src="js/input.js"></script>
 <script src="js/main.js"></script>
 </body>
 </html>
